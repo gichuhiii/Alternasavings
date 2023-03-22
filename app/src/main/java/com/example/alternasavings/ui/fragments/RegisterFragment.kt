@@ -21,7 +21,6 @@ class RegisterFragment : Fragment() {
             binding = FragmentRegisterBinding.inflate(inflater, container, false)
             return binding.root
         }
-
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             arguments?.let {
