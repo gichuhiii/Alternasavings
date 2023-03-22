@@ -1,21 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.RegisterFragment"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:ignore="HardcodedText">
 
-    
+
     <TextView
         android:id="@+id/tv_profile_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Profile Details"
         android:textColor="@color/darktext"
-        android:textSize="24sp"
+        android:textSize="16sp"
+        android:layout_margin="15dp"
 
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Full Name"
+        android:textColor="@color/lighttext"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_profile_details" />
+
+    <EditText
+        android:id="@+id/et_fullname"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/textborder"
+        android:hint="Enter Full Name"
+        android:textColor="@color/green"
+        android:textSize="16sp"
+        android:textColorHint="@color/lighttext"
+        app:layout_constraintEnd_toEndOf="@+id/tv_fullname"
+        app:layout_constraintStart_toStartOf="@+id/tv_fullname"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fullname" />
+
+    <TextView
+        android:id="@+id/tv_idnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="National ID Number"
+        android:textColor="@color/lighttext"
+        android:textSize="16sp"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_fullname"
+        app:layout_constraintStart_toStartOf="@+id/et_fullname"
+        app:layout_constraintTop_toBottomOf="@+id/et_fullname" />
+
+    <EditText
+        android:id="@+id/et_idnumber"
+        android:background="@drawable/textborder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:hint="e.g 3920473"
+        android:inputType="number"
+        android:textSize="16sp"
+        android:textColor="@color/green"
+        android:textColorHint="@color/lighttext"
+        app:layout_constraintEnd_toEndOf="@+id/tv_idnumber"
+        app:layout_constraintStart_toStartOf="@+id/tv_idnumber"
+        app:layout_constraintTop_toBottomOf="@+id/tv_idnumber" />
+
+    <TextView
+        android:id="@+id/tv_dob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date of Birth"
+        android:textColor="@color/lighttext"
+        android:textSize="16sp"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_idnumber"
+        app:layout_constraintStart_toStartOf="@+id/et_idnumber"
+        app:layout_constraintTop_toBottomOf="@+id/et_idnumber" />
+
+    <EditText
+        android:id="@+id/et_dob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/textborder"
+        android:hint="e.g 12/12/1990"
+        android:inputType="date"
+        android:textColor="@color/green"
+        android:textColorHint="@color/lighttext"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_dob"
+        app:layout_constraintStart_toStartOf="@+id/tv_dob"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dob" />
+
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:textColor="@color/lighttext"
+        android:textSize="16sp"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_dob"
+        app:layout_constraintStart_toStartOf="@+id/et_dob"
+        app:layout_constraintTop_toBottomOf="@+id/et_dob" />
+
+    <Spinner
+        android:id="@+id/spinner_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/textborder"
+
+        app:layout_constraintEnd_toEndOf="@+id/tv_gender"
+        app:layout_constraintStart_toStartOf="@+id/tv_gender"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gender" />
+
+    <TextView
+        android:id="@+id/tv_account_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Account Details"
+        android:textColor="@color/darktext"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/spinner_gender"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_gender" />
+
+    <TextView
+        android:id="@+id/tv_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Phone Number"
+        android:textColor="@color/lighttext"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_account_details" />
+
+    <EditText
+        android:id="@+id/et_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/textborder"
+        android:hint="e.g 0712345678"
+        android:inputType="number"
+        android:textColor="@color/green"
+        android:textColorHint="@color/lighttext"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_phone_number"
+        app:layout_constraintStart_toStartOf="@+id/tv_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/tv_phone_number" />
+
+    <TextView
+        android:id="@+id/tv_confirm_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Confirm Phone Number"
+        android:textColor="@color/lighttext"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/et_phone_number"
+        app:layout_constraintStart_toStartOf="@+id/et_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/et_phone_number" />
+
+    <EditText
+        android:id="@+id/et_confirm_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/textborder"
+        android:hint="e.g 0712345678"
+        android:inputType="number"
+        android:textColor="@color/green"
+        android:textColorHint="@color/lighttext"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_confirm_phone_number"
+        app:layout_constraintStart_toStartOf="@+id/tv_confirm_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirm_phone_number" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Email"
+        android:textColor="@color/lighttext"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/et_confirm_phone_number"
+        app:layout_constraintStart_toStartOf="@+id/et_confirm_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/et_confirm_phone_number" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/textborder"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/green"
+        android:textColorHint="@color/lighttext"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_email"
+        app:layout_constraintStart_toStartOf="@+id/tv_email"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
