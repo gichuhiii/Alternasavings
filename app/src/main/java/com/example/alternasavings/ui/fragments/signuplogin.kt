@@ -33,7 +33,8 @@ class signuplogin : Fragment() {
     }
 
     private fun setupUI() {
-     binding.fragmentSignuplogin.apply {
+
+//        binding.fragmentSignuplogin.apply {
 //            btnLogin.setOnClickListener {
 //                val loginFragment = LoginFragment()
 //                val transaction = requireActivity().supportFragmentManager.beginTransaction()
@@ -42,11 +43,11 @@ class signuplogin : Fragment() {
 //                transaction.commit()
 //            }
 //            btnSignup.setOnClickListener {
-//                val signupFragment = RegisterFragment()
+//                val registerFragment = RegisterFragment()
 //                val transaction = requireActivity().supportFragmentManager.beginTransaction()
 //                transaction.replace(R.id.fragment_container, registerFragment)
 //                transaction.addToBackStack(null)
 //                transaction.commit()
-            }
-     }
+//            }
+        }
     }
