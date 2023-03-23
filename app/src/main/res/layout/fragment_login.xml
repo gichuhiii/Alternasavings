@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.fragments.LoginFragment">
+
+    <TextView
+        android:id="@+id/tv_userdetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="User Details"
+        android:textColor="@color/darktext"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Please Enter your Credentials"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_userdetails"
+        app:layout_constraintStart_toStartOf="@+id/tv_userdetails"
+        app:layout_constraintTop_toBottomOf="@+id/tv_userdetails" />
+
+    <TextView
+        android:id="@+id/tv_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Phone Number"
+        android:textSize="16sp"
+        android:textColor="@color/lighttext"
+        app:layout_constraintEnd_toEndOf="@+id/tv_instruction"
+        app:layout_constraintStart_toStartOf="@+id/tv_instruction"
+        app:layout_constraintTop_toBottomOf="@+id/tv_instruction" />
+
+    <EditText
+        android:id="@+id/et_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Phone Number"
+        android:textSize="16sp"
+        android:inputType="phone"
+        android:textColor="@color/green"
+        android:textColorHint="@color/lighttext"
+        android:background="@drawable/textborder"
+        app:layout_constraintEnd_toEndOf="@+id/tv_phone_number"
+        app:layout_constraintStart_toStartOf="@+id/tv_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/tv_phone_number" />
+
+    <TextView
+        android:id="@+id/tv_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Enter PIN"
+        android:textSize="16sp"
+        android:textColor="@color/lighttext"
+        app:layout_constraintEnd_toEndOf="@+id/et_phone_number"
+        app:layout_constraintStart_toStartOf="@+id/et_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/et_phone_number" />
+
+    <EditText
+        android:id="@+id/et_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/textborder"
+        android:hint="PIN"
+        android:textSize="16sp"
+        android:inputType="number"
+        android:textColor="@color/green"
+        android:textColorHint="@color/lighttext"
+        app:layout_constraintEnd_toEndOf="@+id/tv_pin"
+        app:layout_constraintStart_toStartOf="@+id/tv_pin"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pin" />
+
+    <TextView
+        android:id="@+id/tv_forgot_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:text="Forgot PIN"
+        android:textColor="@color/darktext"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/et_pin"
+        app:layout_constraintStart_toStartOf="@+id/et_pin"
+        app:layout_constraintTop_toBottomOf="@+id/et_pin" />
+
+    <TextView
+        android:id="@+id/tv_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account? Sign Up"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/darktext"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_forgot_pin"
+        app:layout_constraintStart_toStartOf="@+id/tv_forgot_pin"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgot_pin" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_next"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/next_btn"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         >
+
+        <TextView
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
