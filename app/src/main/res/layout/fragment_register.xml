@@ -98,7 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/textborder"
-        android:hint="e.g 12/12/1990"
+        android:hint="e.g 22/12/1990"
         android:inputType="date"
         android:textColor="@color/green"
         android:textColorHint="@color/lighttext"
