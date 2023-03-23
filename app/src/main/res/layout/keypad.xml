@@ -178,5 +178,4 @@
         app:layout_constraintTop_toTopOf="@+id/tv_0"
         app:layout_constraintWidth_percent="0.31" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
