@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="1"
+        android:layout_margin="10dp"
+        android:textColor="@color/darktext"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.31" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="2"
+        android:textColor="@color/darktext"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_1"
+        app:layout_constraintStart_toEndOf="@+id/tv_1"
+        app:layout_constraintTop_toTopOf="@+id/tv_1"
+        app:layout_constraintWidth_percent="0.31" />
+
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="@color/darktext"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintWidth_percent="0.31"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_2"
+        app:layout_constraintTop_toTopOf="@+id/tv_2"
+       />
+
+    <TextView
+        android:id="@+id/tv_4"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="4"
+        android:textColor="@color/darktext"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_1"
+        app:layout_constraintWidth_percent="0.31" />
+
+    <TextView
+        android:id="@+id/tv_5"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="5"
+        android:textColor="@color/darktext"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_4"
+        app:layout_constraintStart_toEndOf="@+id/tv_4"
+        app:layout_constraintTop_toTopOf="@+id/tv_4"
+        app:layout_constraintWidth_percent="0.31" />
+
+    <TextView
+        android:id="@+id/tv_6"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="6"
+        android:textColor="@color/darktext"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintWidth_percent="0.31"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_5"
+        app:layout_constraintTop_toTopOf="@+id/tv_5" />
+
+    <TextView
+        android:id="@+id/tv_7"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="7"
+        android:textColor="@color/darktext"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_4"
+        app:layout_constraintWidth_percent="0.31" />
+
+    <TextView
+        android:id="@+id/tv_8"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="8"
+        android:textColor="@color/darktext"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_7"
+        app:layout_constraintStart_toEndOf="@+id/tv_7"
+        app:layout_constraintTop_toTopOf="@+id/tv_7"
+        app:layout_constraintWidth_percent="0.31" />
+
+    <TextView
+        android:id="@+id/tv_9"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="9"
+        android:textColor="@color/darktext"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintWidth_percent="0.31"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_8"
+        app:layout_constraintTop_toTopOf="@+id/tv_8" />
+
+    <ImageView
+        android:id="@+id/iv_fingerprint"
+        android:layout_width="127dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/fingerprint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_7"
+        app:layout_constraintWidth_percent="0.31" />
+
+    <TextView
+        android:id="@+id/tv_0"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/darktext"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_fingerprint"
+        app:layout_constraintStart_toEndOf="@+id/iv_fingerprint"
+        app:layout_constraintTop_toTopOf="@+id/iv_fingerprint"
+        app:layout_constraintWidth_percent="0.31" />
+
+    <ImageView
+        android:id="@+id/iv_previous"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/previous_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_0"
+        app:layout_constraintTop_toTopOf="@+id/tv_0"
+        app:layout_constraintWidth_percent="0.31" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
