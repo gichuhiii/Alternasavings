@@ -15,12 +15,14 @@ class SignupLoginFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
         //inflate layout for this fragment
         val view = inflater.inflate(R.layout.fragment_signuplogin, container, false)
         val button = view.findViewById<Button>(R.id.btn_signup)
         button.setOnClickListener {
            findNavController().navigate(R.id.action_signupLoginFragment_to_registerFragment)
+
         }
         return view
     }
