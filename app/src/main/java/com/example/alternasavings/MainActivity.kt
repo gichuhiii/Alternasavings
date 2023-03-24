@@ -7,14 +7,27 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.alternasavings.databinding.FragmentRegisterBinding
 import com.example.alternasavings.ui.fragments.*
 import com.example.alternasavings.ui.viewmodels.MainViewModel
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var navcontroller: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        navcontroller = navHostFragment.navController
+
+        setupActionBarWithNavController(navcontroller)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return super.onSupportNavigateUp() || navcontroller.navigateUp()
     }
 
 }
