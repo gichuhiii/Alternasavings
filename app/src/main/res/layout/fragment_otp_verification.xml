@@ -68,14 +68,26 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_otp_text" />
 
     <ImageView
+        android:id="@+id/iv_dotted"
         android:layout_width="match_parent"
         android:layout_height="5dp"
+        android:hardwareAccelerated="false"
         android:layerType="software"
         android:src="@drawable/dotted"
-        android:hardwareAccelerated="false"
         app:layout_constraintEnd_toEndOf="@+id/tv_otp_text2"
         app:layout_constraintStart_toStartOf="@+id/tv_otp_text2"
         app:layout_constraintTop_toBottomOf="@+id/tv_otp_text2" />
         />
 
+    <TextView
+        android:id="@+id/tv_resendcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Didn't receive the code? Resend"
+        android:textColor="@color/green"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_dotted"
+        app:layout_constraintStart_toStartOf="@+id/iv_dotted"
+        app:layout_constraintTop_toBottomOf="@+id/iv_dotted" />
 </androidx.constraintlayout.widget.ConstraintLayout>
