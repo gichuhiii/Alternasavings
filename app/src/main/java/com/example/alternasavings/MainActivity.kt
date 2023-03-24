@@ -10,13 +10,15 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.alternasavings.databinding.FragmentRegisterBinding
 import com.example.alternasavings.ui.fragments.LoginFragment
 import com.example.alternasavings.ui.fragments.RegisterFragment
+import com.example.alternasavings.ui.fragments.SignupLoginFragment
+import com.example.alternasavings.ui.fragments.SplashScreenFragment
 import com.example.alternasavings.ui.viewmodels.MainViewModel
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val fragment = LoginFragment()
+        val fragment = SplashScreenFragment()
         val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container, fragment)
         transaction.commit()

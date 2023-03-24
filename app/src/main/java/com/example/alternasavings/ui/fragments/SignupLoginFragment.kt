@@ -5,10 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.alternasavings.R
 import com.example.alternasavings.databinding.FragmentSignuploginBinding
 
-class signuplogin : Fragment() {
+class SignupLoginFragment : Fragment() {
 
     private lateinit var binding: FragmentSignuploginBinding
 
