@@ -2,11 +2,73 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signupLoginFragment">
+<!--    <fragment-->
+<!--        android:id="@+id/splashScreenFragment"-->
+<!--        android:name="com.example.alternasavings.ui.fragments.SplashScreenFragment"-->
+<!--        android:label="fragment_splash_screen"-->
+<!--        tools:layout="@layout/fragment_splash_screen" >-->
+<!--        <action-->
+<!--            android:id="@+id/action_splashScreenFragment_to_onBoardingTwoFragment"-->
+<!--            app:destination="@id/onBoardingTwoFragment" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/onBoardingTwoFragment"-->
+<!--        android:name="com.example.alternasavings.ui.fragments.OnBoardingOneFragment"-->
+<!--        android:label="fragment_on_boarding_two"-->
+<!--        tools:layout="@layout/fragment_on_boarding_two" >-->
+<!--        <action-->
+<!--            android:id="@+id/action_onBoardingOneFragment_to_signupLoginFragment"-->
+<!--            app:destination="@id/signupLoginFragment" />-->
+<!--    </fragment>-->
     <fragment
-        android:id="@+id/splash"
-        android:name="com.example.alternasavings.ui.fragments.SplashScreenFragment"
-        android:label="Splash"
-        tools:layout="@layout/fragment_splash_screen" />
+        android:id="@+id/signupLoginFragment"
+        android:name="com.example.alternasavings.ui.fragments.SignupLoginFragment"
+        android:label="fragment_signuplogin"
+        tools:layout="@layout/fragment_signuplogin" >
+        <action
+            android:id="@+id/action_signupLoginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_signupLoginFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.alternasavings.ui.fragments.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_OTPVerificationFragment"
+            app:destination="@id/OTPVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.alternasavings.ui.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signupLoginFragment"
+            app:destination="@id/signupLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/OTPVerificationFragment"
+        android:name="com.example.alternasavings.ui.fragments.OTPVerificationFragment"
+        android:label="fragment_otp_verification"
+        tools:layout="@layout/fragment_otp_verification" >
+        <action
+            android:id="@+id/action_OTPVerificationFragment2_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_OTPVerificationFragment2_to_activationCodeEntryFragment"
+            app:destination="@id/activationCodeEntryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activationCodeEntryFragment"
+        android:name="com.example.alternasavings.ui.fragments.ActivationCodeEntryFragment"
+        android:label="fragment_activation_code_entry"
+        tools:layout="@layout/fragment_activation_code_entry" />
+
 
 </navigation>
