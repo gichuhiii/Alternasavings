@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.OTPVerificationFragment">
+
+    <TextView
+        android:id="@+id/tv_greeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="Hey, Rowan Atkinson"
+        android:textColor="@color/darktext"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/otp_verification"
+        app:layout_constraintEnd_toEndOf="@+id/tv_greeting"
+        app:layout_constraintStart_toStartOf="@+id/tv_greeting"
+        app:layout_constraintTop_toBottomOf="@+id/tv_greeting" />
+
+    <TextView
+        android:id="@+id/tv_otp_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="We are almost there."
+        android:textColor="@color/green"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_otp"
+        app:layout_constraintStart_toStartOf="@+id/iv_otp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_otp" />
+
+    <TextView
+        android:id="@+id/tv_otp_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="An activation code has been sent to number \n +096....728. If you need assistance, don't \n hesitate to reach out to us."
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_otp_text"
+        app:layout_constraintStart_toStartOf="@+id/tv_otp_text"
+        app:layout_constraintTop_toBottomOf="@+id/tv_otp_text" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layerType="software"
+        android:src="@drawable/dotted"
+        android:hardwareAccelerated="false"
+        app:layout_constraintEnd_toEndOf="@+id/tv_otp_text2"
+        app:layout_constraintStart_toStartOf="@+id/tv_otp_text2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_otp_text2" />
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
