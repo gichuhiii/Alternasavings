@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".ui.fragments.SavingsPinEntryFragment">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="316dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/alterna_savings_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="Enter your Alterna Savings PIN"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/iv_logo"
+        app:layout_constraintStart_toStartOf="@+id/iv_logo"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
+
+    <TextView
+        android:id="@+id/tv_instruction2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Use your PIN to open the app and confirm transactions"
+        android:textColor="@color/green"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_instruction"
+        app:layout_constraintStart_toStartOf="@+id/tv_instruction"
+        app:layout_constraintTop_toBottomOf="@+id/tv_instruction" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_keypad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tv_instruction2"
+        app:layout_constraintStart_toStartOf="@+id/tv_instruction2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_instruction2"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp">
+
+        <include
+            layout="@layout/keypad"
+            android:layout_width="406dp"
+            android:layout_height="340dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_dotted"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:hardwareAccelerated="false"
+        android:layerType="software"
+        android:src="@drawable/dotted"
+        app:layout_constraintEnd_toEndOf="@+id/cl_keypad"
+        app:layout_constraintStart_toStartOf="@+id/cl_keypad"
+        app:layout_constraintTop_toBottomOf="@+id/cl_keypad" />
+
+    <TextView
+        android:id="@+id/tv_resendcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Didn't receive code? Resend"
+        android:textColor="@color/green"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_dotted"
+        app:layout_constraintStart_toStartOf="@+id/iv_dotted"
+        app:layout_constraintTop_toBottomOf="@+id/iv_dotted" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
