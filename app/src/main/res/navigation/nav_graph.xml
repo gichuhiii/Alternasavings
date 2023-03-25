@@ -42,6 +42,9 @@
         <action
             android:id="@+id/action_registerFragment_to_OTPVerificationFragment"
             app:destination="@id/OTPVerificationFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_signupLoginFragment"
+            app:destination="@id/signupLoginFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
