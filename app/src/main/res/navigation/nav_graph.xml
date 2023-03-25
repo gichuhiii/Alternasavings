@@ -66,12 +66,28 @@
         <action
             android:id="@+id/action_OTPVerificationFragment2_to_activationCodeEntryFragment"
             app:destination="@id/activationCodeEntryFragment" />
+        <action
+            android:id="@+id/action_OTPVerificationFragment_to_savingsPinEntryFragment"
+            app:destination="@id/savingsPinEntryFragment" />
     </fragment>
     <fragment
         android:id="@+id/activationCodeEntryFragment"
         android:name="com.example.alternasavings.ui.fragments.ActivationCodeEntryFragment"
         android:label="fragment_activation_code_entry"
-        tools:layout="@layout/fragment_activation_code_entry" />
+        tools:layout="@layout/fragment_activation_code_entry" >
+        <action
+            android:id="@+id/action_activationCodeEntryFragment_to_OTPVerificationFragment"
+            app:destination="@id/OTPVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savingsPinEntryFragment"
+        android:name="com.example.alternasavings.ui.fragments.SavingsPinEntryFragment"
+        android:label="fragment_savings_pin_entry"
+        tools:layout="@layout/fragment_savings_pin_entry" >
+        <action
+            android:id="@+id/action_savingsPinEntryFragment_to_OTPVerificationFragment"
+            app:destination="@id/OTPVerificationFragment" />
+    </fragment>
 
 
 </navigation>
