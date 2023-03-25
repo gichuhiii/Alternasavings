@@ -42,6 +42,9 @@
         <action
             android:id="@+id/action_registerFragment_to_OTPVerificationFragment"
             app:destination="@id/OTPVerificationFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_signupLoginFragment"
+            app:destination="@id/signupLoginFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -51,15 +54,15 @@
         <action
             android:id="@+id/action_loginFragment_to_signupLoginFragment"
             app:destination="@id/signupLoginFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_OTPVerificationFragment"
+            app:destination="@id/OTPVerificationFragment" />
     </fragment>
     <fragment
         android:id="@+id/OTPVerificationFragment"
         android:name="com.example.alternasavings.ui.fragments.OTPVerificationFragment"
         android:label="fragment_otp_verification"
         tools:layout="@layout/fragment_otp_verification" >
-        <action
-            android:id="@+id/action_OTPVerificationFragment2_to_registerFragment"
-            app:destination="@id/registerFragment" />
         <action
             android:id="@+id/action_OTPVerificationFragment2_to_activationCodeEntryFragment"
             app:destination="@id/activationCodeEntryFragment" />
