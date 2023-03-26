@@ -10,6 +10,7 @@ import com.example.alternasavings.R
 
 class SavingsPinEntryFragment : Fragment() {
     override fun onCreateView(
+
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
