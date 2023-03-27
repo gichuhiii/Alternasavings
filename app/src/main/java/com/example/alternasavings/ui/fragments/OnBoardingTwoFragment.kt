@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import com.example.alternasavings.R
 
 class OnBoardingTwoFragment : Fragment() {
@@ -14,5 +15,8 @@ class OnBoardingTwoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_on_boarding_two, container, false)
+
+        //hide action bar
+        (activity as AppCompatActivity).supportActionBar?.hide()
     }
 }
