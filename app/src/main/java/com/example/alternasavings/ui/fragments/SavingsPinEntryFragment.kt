@@ -18,7 +18,7 @@ class SavingsPinEntryFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_savings_pin_entry, container, false)
 
-        //hide action bar
-        (activity as AppCompatActivity).supportActionBar?.hide()
+//        //hide action bar
+//        (activity as AppCompatActivity).supportActionBar?.hide()
     }
 }

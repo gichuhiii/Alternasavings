@@ -17,7 +17,7 @@ class ActivationCodeEntryFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_activation_code_entry, container, false)
 
-        //hide action bar
-        (activity as AppCompatActivity).supportActionBar?.hide()
+//        //hide action bar
+//        (activity as AppCompatActivity).supportActionBar?.hide()
     }
 }

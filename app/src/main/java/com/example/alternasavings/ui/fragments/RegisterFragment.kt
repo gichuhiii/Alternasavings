@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -22,6 +23,9 @@ class RegisterFragment : Fragment() {
         button.setOnClickListener {
             findNavController().navigate(R.id.action_registerFragment_to_OTPVerificationFragment)
         }
+        //Fragment Title
+        (activity as AppCompatActivity).supportActionBar?.title = "Register"
+
         return view
     }
 }

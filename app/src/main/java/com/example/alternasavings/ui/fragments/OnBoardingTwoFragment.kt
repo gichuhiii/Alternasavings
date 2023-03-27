@@ -16,7 +16,7 @@ class OnBoardingTwoFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_on_boarding_two, container, false)
 
-        //hide action bar
-        (activity as AppCompatActivity).supportActionBar?.hide()
+//        //hide action bar
+//        (activity as AppCompatActivity).supportActionBar?.hide()
     }
 }
