@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.example.alternasavings.R
 import com.example.alternasavings.databinding.FragmentSignuploginBinding
@@ -17,6 +18,7 @@ class SignupLoginFragment : Fragment() {
         savedInstanceState: Bundle?
 
     ): View? {
+
         //inflate layout for this fragment
         val view = inflater.inflate(R.layout.fragment_signuplogin, container, false)
 
@@ -24,8 +26,8 @@ class SignupLoginFragment : Fragment() {
         val buttonsignup = view.findViewById<Button>(R.id.btn_signup)
         buttonsignup.setOnClickListener {
            findNavController().navigate(R.id.action_signupLoginFragment_to_registerFragment)
-
         }
+
         //for the login button
         val buttonlogin = view.findViewById<Button>(R.id.btn_login)
         buttonlogin.setOnClickListener {

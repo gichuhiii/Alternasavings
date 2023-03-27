@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -21,6 +22,9 @@ class LoginFragment : Fragment() {
         button.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_OTPVerificationFragment)
         }
+        //Fragment Title
+        (activity as AppCompatActivity).supportActionBar?.title = "Account Login"
+
         return view
     }
 }
