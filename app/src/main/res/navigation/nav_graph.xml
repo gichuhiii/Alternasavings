@@ -25,7 +25,6 @@
     <fragment
         android:id="@+id/signupLoginFragment"
         android:name="com.example.alternasavings.ui.fragments.SignupLoginFragment"
-        android:label="fragment_signuplogin"
         tools:layout="@layout/fragment_signuplogin" >
         <action
             android:id="@+id/action_signupLoginFragment_to_registerFragment"
