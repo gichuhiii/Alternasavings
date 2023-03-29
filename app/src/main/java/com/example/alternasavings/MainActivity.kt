@@ -19,12 +19,11 @@ import com.example.alternasavings.ui.viewmodels.MainViewModel
 class MainActivity : AppCompatActivity() {
     private lateinit var navcontroller: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
-        WindowCompat.setDecorFitsSystemWindows(window, true)
+//        WindowCompat.setDecorFitsSystemWindows(window, true)
 //      setFlags(
 //          WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
 //          WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
 //      )
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 

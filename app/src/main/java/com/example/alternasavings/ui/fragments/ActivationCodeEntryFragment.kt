@@ -20,4 +20,5 @@ class ActivationCodeEntryFragment : Fragment() {
 //        //hide action bar
 //        (activity as AppCompatActivity).supportActionBar?.hide()
     }
+
 }

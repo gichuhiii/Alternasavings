@@ -68,6 +68,9 @@ dependencies {
 
         // Jetpack Compose Integration
         implementation("androidx.navigation:navigation-compose:$nav_version")
+
+        //Material.io
+        implementation 'com.google.android.material:material:1.9.0-alpha01'
     }
 
 }
