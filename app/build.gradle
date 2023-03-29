@@ -30,7 +30,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures{
+    buildFeatures {
         viewBinding true
     }
 }
@@ -49,25 +49,21 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'com.google.android.material:material:1.9.0-beta01'
 
-    dependencies {
-        var nav_version = "2.5.3"
+    var nav_version = "2.5.3"
 
-        // Java language implementation
-        implementation("androidx.navigation:navigation-fragment:$nav_version")
-        implementation("androidx.navigation:navigation-ui:$nav_version")
+    // Java language implementation
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
 
-        // Kotlin
-        implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
-        implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    // Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
-        // Feature module Support
-        implementation("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
 
-        // Testing Navigation
-        androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
+    // Jetpack Compose Integration
+    implementation "androidx.navigation:navigation-compose:$nav_version"
 
-        // Jetpack Compose Integration
-        implementation("androidx.navigation:navigation-compose:$nav_version")
-    }
+    //Material.io
+    implementation "com.google.android.material:material:1.9.0-alpha01"
 
 }

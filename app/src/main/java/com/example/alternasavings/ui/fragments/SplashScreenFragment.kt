@@ -14,9 +14,11 @@ class SplashScreenFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_splash_screen, container, false)
 
         //hide action bar
         (activity as AppCompatActivity).supportActionBar?.hide()
+
+        return inflater.inflate(R.layout.fragment_splash_screen, container, false)
+
     }
 }
