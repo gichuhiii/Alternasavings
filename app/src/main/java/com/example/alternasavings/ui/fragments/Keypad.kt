@@ -1,90 +1,70 @@
 package com.example.alternasavings.ui.fragments
 
 import android.content.Context
-import android.os.Build
-import android.os.Bundle
 import android.util.AttributeSet
-import android.util.SparseArray
-import android.view.LayoutInflater
 import android.view.View
-import android.view.View.OnClickListener
-import android.view.ViewGroup
-import android.widget.SearchView.OnCloseListener
+import android.widget.Button
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.fragment.app.Fragment
 import com.example.alternasavings.R
+import com.google.android.material.textfield.TextInputEditText
 
 class Keypad(context: Context, attrs: AttributeSet) :ConstraintLayout(context, attrs) {
-    private val keyValues = SparseArray<String>()
-
-    //StringBuilder is used to modify a string
-    var code = StringBuilder()
+    //    private val keyValues = SparseArray<String>()
+//
+//    //StringBuilder is used to modify a string
+//    var code = StringBuilder()
+    var inputText: TextInputEditText? = null
 
     init {
         inflate(context, R.layout.keypad, this)
 
-        val tv_1 = findViewById<View>(R.id.tv_1)
-        val tv_2 = findViewById<View>(R.id.tv_2)
-        val tv_3 = findViewById<View>(R.id.tv_3)
-        val tv_4 = findViewById<View>(R.id.tv_4)
-        val tv_5 = findViewById<View>(R.id.tv_5)
-        val tv_6 = findViewById<View>(R.id.tv_6)
-        val tv_7 = findViewById<View>(R.id.tv_7)
-        val tv_8 = findViewById<View>(R.id.tv_8)
-        val tv_9 = findViewById<View>(R.id.tv_9)
-        val tv_0 = findViewById<View>(R.id.tv_0)
+        inputText = findViewById(R.id.et_input)
+
+        val b_1 = findViewById<Button>(R.id.tv_1)
+        val b_2 = findViewById<Button>(R.id.tv_2)
+        val b_3 = findViewById<Button>(R.id.tv_3)
+        val b_4 = findViewById<Button>(R.id.tv_4)
+        val b_5 = findViewById<Button>(R.id.tv_5)
+        val b_6 = findViewById<Button>(R.id.tv_6)
+        val b_7 = findViewById<Button>(R.id.tv_7)
+        val b_8 = findViewById<Button>(R.id.tv_8)
+        val b_9 = findViewById<Button>(R.id.tv_9)
+        val b_0 = findViewById<Button>(R.id.tv_0)
         val iv_delete = findViewById<View>(R.id.iv_delete)
 
-        tv_1.setOnClickListener(context as OnClickListener)
-        tv_2.setOnClickListener(context as OnClickListener)
-        tv_3.setOnClickListener(context as OnClickListener)
-        tv_4.setOnClickListener(context as OnClickListener)
-        tv_5.setOnClickListener(context as OnClickListener)
-        tv_6.setOnClickListener(context as OnClickListener)
-        tv_7.setOnClickListener(context as OnClickListener)
-        tv_8.setOnClickListener(context as OnClickListener)
-        tv_9.setOnClickListener(context as OnClickListener)
-        tv_0.setOnClickListener(context as OnClickListener)
-        iv_delete.setOnClickListener(context as OnClickListener)
-
-        keyValues.put(R.id.tv_1, "1")
-        keyValues.put(R.id.tv_2, "2")
-        keyValues.put(R.id.tv_3, "3")
-        keyValues.put(R.id.tv_4, "4")
-        keyValues.put(R.id.tv_5, "5")
-        keyValues.put(R.id.tv_6, "6")
-        keyValues.put(R.id.tv_7, "7")
-        keyValues.put(R.id.tv_8, "8")
-        keyValues.put(R.id.tv_9, "9")
-        keyValues.put(R.id.tv_0, "0")
-
-        //to delete the most previous entry
+        //    to delete the most previous entry
         iv_delete.setOnClickListener {
-            if (code.isNotEmpty()) {
-                code.deleteCharAt(code.length - 1)
+            if (inputText?.text.toString().length > 0) {
+                inputText?.text?.delete(
+                    inputText?.text.toString().length - 1,
+                    inputText?.text.toString().length
+                )
             }
         }
+
+        b_1.setOnClickListener { this.onClick(1) }
+        b_2.setOnClickListener { this.onClick(2) }
+        b_3.setOnClickListener { this.onClick(3) }
+        b_4.setOnClickListener { this.onClick(4) }
+        b_5.setOnClickListener { this.onClick(5) }
+        b_6.setOnClickListener { this.onClick(6) }
+        b_7.setOnClickListener { this.onClick(7) }
+        b_8.setOnClickListener { this.onClick(8) }
+        b_9.setOnClickListener { this.onClick(9) }
+        b_0.setOnClickListener { this.onClick(0) }
     }
 
-    override fun onClick(v: View?) {
-
-        if (v != null) {
-            val value = keyValues.get(v.id)
-            if (value != null) {
-                code.append(value)
-
-            }
+    fun onClick(v: Int) {
+        if (inputText?.text.toString().length < 6) {
+            inputText?.append(v.toString())
+        } else {
+            Toast.makeText(
+                context,
+                "You have reached the maximum number of characters",
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 }
 
-//            val value: String? = keyValues.get(v!!.id)
-//            if (code.length < 6) {
-//                code.append(value)
-//                et_input.setText(code)
-//            }
-//            else {
-//                Toast.makeText(this, "You have reached the maximum number of characters", Toast.LENGTH_SHORT).show()
-//            }
