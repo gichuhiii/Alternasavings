@@ -49,7 +49,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="15dp">
 
-        <com.example.alternasavings.ui.fragments.KeypadFragment
+        <com.example.alternasavings.ui.fragments.Keypad
             android:id="@+id/keypad"
             android:layout_width="400dp"
             android:layout_height="match_parent"

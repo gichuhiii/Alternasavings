@@ -17,7 +17,7 @@ class ActivationCodeEntryFragment : Fragment() {
         //hide action bar
 //      (activity as AppCompatActivity).supportActionBar?.hide()
 //
-//        val keypad = view?.findViewById(R.id.keypad) as KeypadFragment
+//        val keypad = view?.findViewById(R.id.keypad) as Keypad
 //        keypad?.setOnClickListener {
 //            print("Hi")
 //        }
