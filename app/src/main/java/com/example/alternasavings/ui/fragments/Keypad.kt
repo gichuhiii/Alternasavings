@@ -10,6 +10,7 @@ import android.view.View
 import android.view.View.OnClickListener
 import android.view.ViewGroup
 import android.widget.SearchView.OnCloseListener
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
@@ -18,10 +19,13 @@ import java.util.zip.Inflater
 
 class Keypad(context: Context, attrs: AttributeSet) :ConstraintLayout(context, attrs) {
     private val keyValues = SparseArray<String>()
+
+    //StringBuilder is used to modify a string
     var code = StringBuilder()
 
     init {
         inflate(context, R.layout.keypad, this)
+
         val tv_1 = findViewById<View>(R.id.tv_1)
         val tv_2 = findViewById<View>(R.id.tv_2)
         val tv_3 = findViewById<View>(R.id.tv_3)
@@ -57,32 +61,31 @@ class Keypad(context: Context, attrs: AttributeSet) :ConstraintLayout(context, a
         keyValues.put(R.id.tv_9, "9")
         keyValues.put(R.id.tv_0, "0")
 
+        //to delete the most previous entry
+        iv_delete.setOnClickListener {
+            if (code.isNotEmpty()) {
+                code.deleteCharAt(code.length - 1)
+            }
+        }
+    }
+
+    fun onClick(v: View?) {
+
+        if (v != null) {
+            val value = keyValues.get(v.id)
+            if (value != null) {
+                code.append(value)
+
+            }
+        }
     }
 }
-//    override fun onCreateView(
-//        inflater: LayoutInflater,
-//        container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
 
-
-//        iv_delete?.setOnClickListener(this)
-//
-//        keyValues.put(R.id.tv_1, "1")
-//        keyValues.put(R.id.tv_2, "2")
-//        keyValues.put(R.id.tv_3, "3")
-//        keyValues.put(R.id.tv_4, "4")
-//        keyValues.put(R.id.tv_5, "5")
-//        keyValues.put(R.id.tv_6, "6")
-//        keyValues.put(R.id.tv_7, "7")
-//        keyValues.put(R.id.tv_8, "8")
-//        keyValues.put(R.id.tv_9, "9")
-//        keyValues.put(R.id.tv_0, "0")
-//
-//        return inflater.inflate(R.layout.keypad, container, false)
-//
-//    }
-
-//    override fun onClick(v: View?) {
-//        TODO("Not yet implemented")
-//    }
+//            val value: String? = keyValues.get(v!!.id)
+//            if (code.length < 6) {
+//                code.append(value)
+//                et_input.setText(code)
+//            }
+//            else {
+//                Toast.makeText(this, "You have reached the maximum number of characters", Toast.LENGTH_SHORT).show()
+//            }
