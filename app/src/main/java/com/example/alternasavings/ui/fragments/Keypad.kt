@@ -19,6 +19,8 @@ import java.util.zip.Inflater
 
 class Keypad(context: Context, attrs: AttributeSet) :ConstraintLayout(context, attrs) {
     private val keyValues = SparseArray<String>()
+
+    //StringBuilder is used to modify a string
     var code = StringBuilder()
 
     init {
