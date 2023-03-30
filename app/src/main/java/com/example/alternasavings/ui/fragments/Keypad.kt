@@ -15,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import com.example.alternasavings.R
-import java.util.zip.Inflater
 
 class Keypad(context: Context, attrs: AttributeSet) :ConstraintLayout(context, attrs) {
     private val keyValues = SparseArray<String>()
