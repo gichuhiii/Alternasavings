@@ -38,17 +38,17 @@ class Keypad(context: Context, attrs: AttributeSet) :ConstraintLayout(context, a
         val tv_0 = findViewById<View>(R.id.tv_0)
         val iv_delete = findViewById<View>(R.id.iv_delete)
 
-        tv_1?.setOnClickListener(context as OnClickListener)
-        tv_2?.setOnClickListener(context as OnClickListener)
-        tv_3?.setOnClickListener(context as OnClickListener)
-        tv_4?.setOnClickListener(context as OnClickListener)
-        tv_5?.setOnClickListener(context as OnClickListener)
-        tv_6?.setOnClickListener(context as OnClickListener)
-        tv_7?.setOnClickListener(context as OnClickListener)
-        tv_8?.setOnClickListener(context as OnClickListener)
-        tv_9?.setOnClickListener(context as OnClickListener)
-        tv_0?.setOnClickListener(context as OnClickListener)
-        iv_delete?.setOnClickListener(context as OnClickListener)
+        tv_1.setOnClickListener(context as OnClickListener)
+        tv_2.setOnClickListener(context as OnClickListener)
+        tv_3.setOnClickListener(context as OnClickListener)
+        tv_4.setOnClickListener(context as OnClickListener)
+        tv_5.setOnClickListener(context as OnClickListener)
+        tv_6.setOnClickListener(context as OnClickListener)
+        tv_7.setOnClickListener(context as OnClickListener)
+        tv_8.setOnClickListener(context as OnClickListener)
+        tv_9.setOnClickListener(context as OnClickListener)
+        tv_0.setOnClickListener(context as OnClickListener)
+        iv_delete.setOnClickListener(context as OnClickListener)
 
         keyValues.put(R.id.tv_1, "1")
         keyValues.put(R.id.tv_2, "2")
@@ -69,7 +69,7 @@ class Keypad(context: Context, attrs: AttributeSet) :ConstraintLayout(context, a
         }
     }
 
-    fun onClick(v: View?) {
+    override fun onClick(v: View?) {
 
         if (v != null) {
             val value = keyValues.get(v.id)
