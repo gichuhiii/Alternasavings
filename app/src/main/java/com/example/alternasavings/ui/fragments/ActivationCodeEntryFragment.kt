@@ -24,7 +24,5 @@ class ActivationCodeEntryFragment : Fragment() {
 
         return inflater.inflate(R.layout.fragment_activation_code_entry, container, false)
 
-
     }
-
 }
