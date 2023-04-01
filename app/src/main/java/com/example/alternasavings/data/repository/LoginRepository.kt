@@ -15,6 +15,7 @@ class LoginRepository(private val mockAPiService: MockAPiService) {
 
     //find user by phone number and password
     fun authenticateUserByPhoneNumber(phoneNumber: String, password: String): User? {
+        //add password in user data class
         val user = users.find { it.phoneNumber == phoneNumber && it.password == password }
         return user
     }
