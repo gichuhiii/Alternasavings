@@ -12,6 +12,9 @@ import com.example.alternasavings.R
 
 
 class LoginFragment : Fragment() {
+
+    private var username: String = ""
+    private var password: String = ""
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,6 +29,16 @@ class LoginFragment : Fragment() {
         (activity as AppCompatActivity).supportActionBar?.title = "Account Login"
 
         return view
+    }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        login(username = "username", password = "password")
+    }
+
+    private fun login(username: String, password: String) {
+
     }
 }
 
