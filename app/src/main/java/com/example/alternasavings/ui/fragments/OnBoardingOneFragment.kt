@@ -15,9 +15,10 @@ class OnBoardingOneFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //        //hide action bar
+//        (activity as AppCompatActivity).supportActionBar?.hide()
+
         return inflater.inflate(R.layout.fragment_on_boarding_one, container, false)
 
-//        //hide action bar
-//        (activity as AppCompatActivity).supportActionBar?.hide()
     }
 }
