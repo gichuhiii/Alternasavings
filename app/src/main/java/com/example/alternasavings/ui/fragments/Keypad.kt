@@ -11,9 +11,9 @@ import com.google.android.material.textfield.TextInputEditText
 
 class Keypad(context: Context, attrs: AttributeSet) :ConstraintLayout(context, attrs) {
     //    private val keyValues = SparseArray<String>()
-//
-//    //StringBuilder is used to modify a string
-//    var code = StringBuilder()
+    //
+    //    //StringBuilder is used to modify a string
+    //    var code = StringBuilder()
     var inputText: TextInputEditText? = null
 
     init {
