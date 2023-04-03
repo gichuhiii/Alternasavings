@@ -11,16 +11,16 @@
         android:id="@+id/tv_greeting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="124dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="15dp"
         android:gravity="center"
         android:text="Hey, Rowan Atkinson"
         android:textColor="@color/darktext"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -68,16 +68,6 @@
         app:layout_constraintStart_toStartOf="@+id/tv_otp_text"
         app:layout_constraintTop_toBottomOf="@+id/tv_otp_text" />
 
-    <ImageView
-        android:id="@+id/iv_dotted"
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:hardwareAccelerated="false"
-        android:layerType="software"
-        android:src="@drawable/dotted"
-        app:layout_constraintEnd_toEndOf="@+id/tv_otp_text2"
-        app:layout_constraintStart_toStartOf="@+id/tv_otp_text2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_otp_text2" />
 
     <TextView
         android:id="@+id/tv_resendcode"
@@ -87,7 +77,8 @@
         android:text="Didn't receive the code? Resend"
         android:textColor="@color/green"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_dotted"
-        app:layout_constraintStart_toStartOf="@+id/iv_dotted"
-        app:layout_constraintTop_toBottomOf="@+id/iv_dotted" />
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_otp_text2"
+        app:layout_constraintStart_toStartOf="@+id/tv_otp_text2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_otp_text2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
