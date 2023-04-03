@@ -32,13 +32,13 @@ class LoginFragment : Fragment() {
     }
 
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        login(username = "username", password = "password")
-    }
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//        login(username = "username", password = "password")
+//    }
+//
+//    private fun login(username: String, password: String) {
 
-    private fun login(username: String, password: String) {
-
-    }
+//    }
 }
 
