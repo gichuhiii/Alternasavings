@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/signupLoginFragment">
+    app:startDestination="@id/loginFragment">
 <!--    <fragment-->
 <!--        android:id="@+id/splashScreenFragment"-->
 <!--        android:name="com.example.alternasavings.ui.fragments.SplashScreenFragment"-->
@@ -54,8 +54,8 @@
             android:id="@+id/action_loginFragment_to_signupLoginFragment"
             app:destination="@id/signupLoginFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_OTPVerificationFragment"
-            app:destination="@id/OTPVerificationFragment" />
+            android:id="@+id/action_loginFragment_to_OTPLoginFragment"
+            app:destination="@id/OTPLoginFragment" />
     </fragment>
     <fragment
         android:id="@+id/OTPVerificationFragment"
@@ -65,9 +65,6 @@
         <action
             android:id="@+id/action_OTPVerificationFragment2_to_activationCodeEntryFragment"
             app:destination="@id/activationCodeEntryFragment" />
-        <action
-            android:id="@+id/action_OTPVerificationFragment_to_savingsPinEntryFragment"
-            app:destination="@id/savingsPinEntryFragment" />
     </fragment>
     <fragment
         android:id="@+id/activationCodeEntryFragment"
@@ -87,8 +84,8 @@
         android:label="fragment_savings_pin_entry"
         tools:layout="@layout/fragment_savings_pin_entry" >
         <action
-            android:id="@+id/action_savingsPinEntryFragment_to_OTPVerificationFragment"
-            app:destination="@id/OTPVerificationFragment" />
+            android:id="@+id/action_savingsPinEntryFragment_to_OTPLoginFragment"
+            app:destination="@id/OTPLoginFragment" />
     </fragment>
     <fragment
         android:id="@+id/enterNewPinFragment"
@@ -110,6 +107,18 @@
         <action
             android:id="@+id/action_confirmPinFragment_to_enterNewPinFragment"
             app:destination="@id/enterNewPinFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/OTPLoginFragment"
+        android:name="com.example.alternasavings.ui.fragments.OTPLoginFragment"
+        android:label="fragment_otp_login"
+        tools:layout="@layout/fragment_otp_login" >
+        <action
+            android:id="@+id/action_OTPLoginFragment_to_savingsPinEntryFragment"
+            app:destination="@id/savingsPinEntryFragment" />
+        <action
+            android:id="@+id/action_OTPLoginFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 
 
