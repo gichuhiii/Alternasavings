@@ -23,7 +23,7 @@ class LoginFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_login, container, false)
         val button = view.findViewById<ConstraintLayout>(R.id.cl_next)
         button.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_OTPVerificationFragment)
+            findNavController().navigate(R.id.action_loginFragment_to_OTPLoginFragment)
         }
         //Fragment Title
         (activity as AppCompatActivity).supportActionBar?.title = "Account Login"
@@ -31,14 +31,13 @@ class LoginFragment : Fragment() {
         return view
     }
 
-
 //    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 //        super.onViewCreated(view, savedInstanceState)
 //        login(username = "username", password = "password")
 //    }
-//
-//    private fun login(username: String, password: String) {
 
+//    private fun login(username: String, password: String) {
+//
 //    }
 }
 
