@@ -124,7 +124,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        hintTextColor="@color/lighttext"
         android:background="@drawable/textborder"
         app:layout_constraintEnd_toEndOf="@+id/tv_gender"
         app:layout_constraintStart_toStartOf="@+id/tv_gender"
@@ -134,6 +133,8 @@
             android:id="@+id/autocomplete_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:textSize="16sp"
             android:background="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
