@@ -13,5 +13,7 @@
     <color name="orange">#F58F00</color>
     <color name="green">#027E00</color>
     <color name="blue">#1A87DD</color>
+    <color name="dashcolor">#F4F5F6</color>
+    <color name="pink">#C34C4C</color>
 
 </resources>
