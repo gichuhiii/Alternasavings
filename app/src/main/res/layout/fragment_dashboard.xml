@@ -12,10 +12,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:src="@drawable/profilephoto"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="27dp" />
 
     <TextView
         android:id="@+id/tv_greeting"
@@ -24,7 +25,7 @@
         android:layout_margin="10dp"
         android:text="Hello & Welcome"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/tv_profilephoto"
         tools:layout_editor_absoluteY="16dp" />
 
@@ -36,19 +37,69 @@
         android:layout_marginTop="16dp"
         android:text="Michael Abod"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/tv_profilephoto"
         app:layout_constraintTop_toBottomOf="@+id/tv_greeting" />
 
-    <Button
-        android:id="@+id/bt_sendmoney"
-        style="@style/Widget.MaterialComponents.Button.Icon"
+
+    <ImageView
+        android:id="@+id/iv_loadmoney"
+        android:layout_width="35dp"
+        android:layout_height="32dp"
+        android:background="@drawable/loadmoneybackground"
+        android:src="@drawable/loadmoneybg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintStart_toEndOf="@+id/tv_greeting"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <TextView
+        android:id="@+id/tv_loadmoney"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Load Money"
+        app:layout_constraintEnd_toEndOf="@+id/iv_loadmoney"
+        app:layout_constraintStart_toStartOf="@+id/iv_loadmoney"
+        app:layout_constraintTop_toBottomOf="@+id/iv_loadmoney" />
+
+    <!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cv_balances"-->
+<!--        android:layout_width="389dp"-->
+<!--        android:layout_height="125dp"-->
+<!--        android:layout_marginTop="48dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        app:cardCornerRadius="60dp"-->
+<!--        android:background="@drawable/balancesbackground"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/iv_loadmoney"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/tv_profilephoto"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_name">-->
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+    <Button
+        android:id="@+id/bt_sendmoney"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="163dp"
+        android:layout_height="58dp"
+        android:backgroundTint="@color/green"
         android:text="Send Money"
         android:textSize="16sp"
         app:icon="@drawable/sendmoneyicon"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="107dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="271dp" />
+
+    <Button
+        android:id="@+id/bt_requestmoney"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="169dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/blue"
+        android:text="Request Money"
+        android:textSize="16sp"
+        app:icon="@drawable/requestmoneyicon"
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="271dp" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
