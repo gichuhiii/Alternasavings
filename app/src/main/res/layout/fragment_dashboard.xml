@@ -39,7 +39,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_logo"
-        app:layout_constraintVertical_bias="0.0" >
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_dash"
@@ -59,8 +59,8 @@
                 android:id="@+id/tv_greeting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hello &amp; Welcome"
                 android:layout_marginStart="10dp"
+                android:text="Hello &amp; Welcome"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/tv_profilephoto"
@@ -112,10 +112,10 @@
                 app:layout_constraintStart_toStartOf="@+id/tv_profilephoto"
                 app:layout_constraintTop_toBottomOf="@+id/tv_name">
 
-<!--                <ImageView-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:src="@drawable/balancesbg">-->
+                <!--                <ImageView-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:src="@drawable/balancesbg">-->
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -176,8 +176,8 @@
                 android:layout_margin="15dp"
                 android:backgroundTint="@color/green"
                 android:text="Send Money"
-                android:textSize="16sp"
                 android:textColor="@color/black"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:icon="@drawable/sendmoneyicon"
                 app:layout_constraintStart_toStartOf="@+id/cv_balances"
@@ -191,8 +191,8 @@
                 android:layout_height="60dp"
                 android:backgroundTint="@color/blue"
                 android:text="Request Money"
-                android:textSize="16sp"
                 android:textColor="@color/black"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:icon="@drawable/requestmoneyicon"
                 app:layout_constraintStart_toEndOf="@+id/bt_sendmoney"
@@ -206,8 +206,8 @@
                 android:layout_height="60dp"
                 android:backgroundTint="@color/pink"
                 android:text="Expense Tracking"
-                android:textSize="16sp"
                 android:textColor="@color/black"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:icon="@drawable/sendmoneyicon"
                 app:layout_constraintStart_toStartOf="@+id/bt_sendmoney"
@@ -221,8 +221,8 @@
                 android:layout_height="60dp"
                 android:backgroundTint="@color/blue"
                 android:text="Budget Tracker"
-                android:textSize="16sp"
                 android:textColor="@color/black"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:icon="@drawable/requestmoneyicon"
                 app:layout_constraintStart_toEndOf="@+id/bt_expensettracking"
@@ -233,15 +233,18 @@
                 android:id="@+id/tv_lasttransactions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Last Transactions"
                 android:layout_marginStart="10dp"
-                android:textSize="16sp"
+                android:text="Last Transactions"
                 android:textColor="@color/black"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/bt_expensettracking"
                 app:layout_constraintTop_toBottomOf="@+id/bt_expensettracking" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
