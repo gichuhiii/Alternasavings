@@ -33,6 +33,7 @@ class RegisterFragment : Fragment() {
         //for next view
         val button = view.findViewById<ConstraintLayout>(R.id.cl_next)
         button.setOnClickListener {
+
             findNavController().navigate(R.id.action_registerFragment_to_OTPVerificationFragment)
         }
         //Fragment Title
