@@ -7,9 +7,9 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(private var repository: LoginRepository) : ViewModel(){
 
-    fun login(username: String, password: String){
+    fun login(phoneNumber: String, password: String){
         viewModelScope.launch {
-            repository.login(username, password)
+            repository.loginUser(phoneNumber, password)
         }
     }
 }
