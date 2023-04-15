@@ -15,7 +15,7 @@
         android:layout_marginTop="10dp"
         android:text="Goals"
         android:textColor="@color/white"
-        android:textSize="24dp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,8 +45,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_goals"
-            android:layout_width="match_parent"
-            android:layout_height="684dp">
+            android:layout_width="412dp"
+            android:layout_height="685dp">
 
             <TextView
                 android:id="@+id/tv_popular"
@@ -61,71 +61,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv_goal1"
-                android:layout_width="203dp"
-                android:layout_height="218dp"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="17dp"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_popularchallenges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tv_popular"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/tv_52week"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="52-Week Savings \n Challenge"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:id="@+id/iv_challengeimage"
-                        android:layout_width="205dp"
-                        android:layout_height="135dp"
-                        android:src="@drawable/challengesimage"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_52week" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/bt_joinchallenge"
-                        android:layout_width="115dp"
-                        android:layout_height="27dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/joinchallenge_btn"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/iv_challengeimage">
-
-                        <TextView
-                            android:id="@+id/tv_joinchallenge"
-                            android:layout_width="109dp"
-                            android:layout_height="21dp"
-                            android:text="Join Challenge"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="12sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

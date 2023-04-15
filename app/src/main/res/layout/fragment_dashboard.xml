@@ -112,11 +112,6 @@
                 app:layout_constraintStart_toStartOf="@+id/tv_profilephoto"
                 app:layout_constraintTop_toBottomOf="@+id/tv_name">
 
-                <!--                <ImageView-->
-                <!--                    android:layout_width="0dp"-->
-                <!--                    android:layout_height="match_parent"-->
-                <!--                    android:src="@drawable/balancesbg">-->
-
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -171,8 +166,8 @@
             <Button
                 android:id="@+id/bt_sendmoney"
                 style="@style/Widget.Material3.Button.IconButton.Filled"
-                android:layout_width="190dp"
-                android:layout_height="60dp"
+                android:layout_width="188dp"
+                android:layout_height="52dp"
                 android:layout_margin="15dp"
                 android:background="@drawable/gradient_purple"
                 android:backgroundTint="@null"
@@ -188,14 +183,14 @@
             <Button
                 android:id="@+id/bt_requestmoney"
                 style="@style/Widget.Material3.Button.IconButton.Filled"
-                android:layout_width="190dp"
-                android:layout_height="60dp"
+                android:layout_width="194dp"
+                android:layout_height="58dp"
                 android:backgroundTint="@null"
-                app:background="@drawable/gradient_blue"
                 android:text="Request Money"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
+                app:background="@drawable/gradient_blue"
                 app:icon="@drawable/requestmoneyicon"
                 app:layout_constraintStart_toEndOf="@+id/bt_sendmoney"
                 app:layout_constraintTop_toTopOf="@+id/bt_sendmoney"
@@ -221,15 +216,15 @@
             <Button
                 android:id="@+id/bt_budgettracker"
                 style="@style/Widget.Material3.Button.IconButton.Filled"
-                android:layout_width="190dp"
-                android:layout_height="60dp"
-                android:backgroundTint="@null"
+                android:layout_width="188dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/gradient_orange"
+                android:backgroundTint="@null"
                 android:text="Budget Tracker"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:layout_marginTop="10dp"
                 app:icon="@drawable/requestmoneyicon"
                 app:layout_constraintStart_toEndOf="@+id/bt_expensettracking"
                 app:layout_constraintTop_toBottomOf="@+id/bt_sendmoney"
@@ -259,7 +254,6 @@
                 app:layout_constraintEnd_toEndOf="@+id/bt_budgettracker"
                 app:layout_constraintTop_toBottomOf="@+id/bt_budgettracker" />
 
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_lasttransactions"
                 android:layout_width="match_parent"
@@ -269,8 +263,8 @@
                 tools:listitem="@layout/transactionsample"
                 app:layout_constraintEnd_toEndOf="@+id/tv_viewall"
                 app:layout_constraintStart_toStartOf="@+id/tv_lasttransactions"
-                app:layout_constraintTop_toBottomOf="@+id/tv_lasttransactions"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/tv_lasttransactions">
+            </androidx.recyclerview.widget.RecyclerView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
