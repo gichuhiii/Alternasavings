@@ -7,16 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.alternasavings.R
 
+class MilestonesFragment : Fragment() {
 
-class SavingsPinEntryFragment : Fragment() {
     override fun onCreateView(
-
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        return inflater.inflate(R.layout.fragment_savings_pin_entry, container, false)
-
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_milestones, container, false)
     }
 }

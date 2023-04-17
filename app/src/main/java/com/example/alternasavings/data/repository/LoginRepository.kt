@@ -1,34 +1,22 @@
 package com.example.alternasavings.data.repository
 
-import com.example.alternasavings.data.api.MockAPiService
-import com.example.alternasavings.data.api.UserLoginApi
-import com.example.alternasavings.model.UserLoginPayload
-import com.example.alternasavings.model.UserLoginResponse
+import com.example.alternasavings.data.network.LoginService
+import com.example.alternasavings.model.LoginPayload
+import com.example.alternasavings.model.LoginResponse
+import retrofit2.Response
 
-//manages user authentication process
-//class LoginRepository(private val mockAPiService: MockAPiService) {
-//    suspend fun login(username: String, password: String) {
-//        mockAPiService.login(username, password)
-//    }
-//}
+class LoginRepository {
+    suspend fun login(phoneNumber: String, password: String): Result<LoginResponse> {
+        val payload = LoginPayload(phoneNumber, password)
+        val response = LoginService.ApiClient.LoginService.login(payload)
 
-class LoginRepository(private val userLoginApi: UserLoginApi) {
-
-    suspend fun loginUser(
-        password: String,
-        phoneNumber: String
-    ): Result<UserLoginResponse> {
-        val payload = UserLoginPayload(
-          phoneNumber = phoneNumber,
-            password = password
-        )
-
-        return try {
-            val response = userLoginApi.loginUser(payload)
-            Result.success(response)
-        } catch (e: Exception) {
-            Result.failure(e)
+        if (response.isSuccessful) {
+            val loginResponse = response.body()
+            if (loginResponse != null) {
+                return Result.success(loginResponse)
+            }
         }
+
+        return Result.failure(Exception("Failed to login"))
     }
 }
-

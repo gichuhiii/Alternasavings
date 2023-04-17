@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    
+    android:layout_height="80dp">
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:cardBackgroundColor="@color/dashcolor"
         android:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:background="@color/dashcolor">
 
-        <com.google.android.material.card.MaterialCardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cv_profilepicture"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -39,14 +39,14 @@
                     android:background="@drawable/transactionsample"
                     android:padding="10dp"></ImageView>
 
-        </com.google.android.material.card.MaterialCardView>
+            </com.google.android.material.card.MaterialCardView>
 
             <TextView
                 android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yara Khalil"
                 android:layout_margin="15dp"
+                android:text="Yara Khalil"
                 android:textColor="@color/darktext"
                 android:textSize="18sp"
                 app:layout_constraintStart_toEndOf="@+id/cv_profilepicture"
@@ -56,10 +56,10 @@
                 android:id="@+id/tv_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Oct 15, 11:05 AM"
-                android:textSize="13sp"
-                android:textColor="@color/lighttext"
                 android:layout_marginTop="3dp"
+                android:text="Oct 15, 11:05 AM"
+                android:textColor="@color/lighttext"
+                android:textSize="13sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_name"
                 app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
@@ -67,13 +67,12 @@
                 android:id="@+id/tv_amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
                 android:text="+ Ksh 350.00"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:layout_marginEnd="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/tv_date" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

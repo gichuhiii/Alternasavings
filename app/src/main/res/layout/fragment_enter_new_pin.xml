@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.EnterNewPinFragment">
 
-   <ImageView
-       android:id="@+id/iv_logo"
-       android:layout_width="320dp"
-       android:layout_height="125dp"
-       android:layout_marginStart="10dp"
-       android:layout_marginTop="20dp"
-       android:layout_marginEnd="10dp"
-       android:src="@drawable/alterna_savings_logo"
-       app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="320dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/alterna_savings_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-   <TextView
-       android:id="@+id/tv_instruction"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_marginStart="10dp"
-       android:layout_marginTop="15dp"
-       android:layout_marginEnd="10dp"
-       android:gravity="center"
-       android:text="Enter New Pin"
-       android:textColor="@color/green"
-       android:textSize="20sp"
-       android:textStyle="bold"
-       app:layout_constraintEnd_toEndOf="@+id/iv_logo"
-       app:layout_constraintStart_toStartOf="@+id/iv_logo"
-       app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
+    <TextView
+        android:id="@+id/tv_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="Enter New Pin"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/iv_logo"
+        app:layout_constraintStart_toStartOf="@+id/iv_logo"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
 
-   <androidx.constraintlayout.widget.ConstraintLayout
-       android:id="@+id/cl_keypad"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       app:layout_constraintEnd_toEndOf="@+id/tv_instruction"
-       app:layout_constraintStart_toStartOf="@+id/tv_instruction"
-       app:layout_constraintTop_toBottomOf="@+id/tv_instruction"
-       android:layout_marginStart="10dp"
-       android:layout_marginTop="15dp"
-       android:layout_marginEnd="10dp"
-       android:layout_marginBottom="15dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_keypad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_instruction"
+        app:layout_constraintStart_toStartOf="@+id/tv_instruction"
+        app:layout_constraintTop_toBottomOf="@+id/tv_instruction">
 
-      <com.example.alternasavings.ui.fragments.Keypad
-          android:id="@+id/keypad"
-          android:layout_width="400dp"
-          android:layout_height="match_parent"
-          android:layout_marginStart="10dp"
-          android:layout_marginTop="15dp"
-          android:layout_marginEnd="10dp"
-          android:layout_marginBottom="15dp"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent"/>
+        <com.example.alternasavings.ui.fragments.Keypad
+            android:id="@+id/keypad"
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-   </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

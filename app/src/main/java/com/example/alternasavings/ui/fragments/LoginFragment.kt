@@ -4,40 +4,38 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
+import android.widget.Toast
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.example.alternasavings.R
+import androidx.navigation.fragment.findNavController
+import com.example.alternasavings.databinding.FragmentLoginBinding
+import com.example.alternasavings.ui.viewmodels.LoginViewModel
 
 
 class LoginFragment : Fragment() {
 
-    private var username: String = ""
-    private var password: String = ""
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        //inflate layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_login, container, false)
-        val button = view.findViewById<ConstraintLayout>(R.id.cl_next)
-        button.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_OTPLoginFragment)
-        }
-        //Fragment Title
-        (activity as AppCompatActivity).supportActionBar?.title = "Account Login"
+    private lateinit var viewModel: LoginViewModel
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val binding: ViewDataBinding? = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
+        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+//        binding?.viewModel = viewModel
+        binding?.lifecycleOwner = this
 
-        return view
+        viewModel.loginResult.observe(viewLifecycleOwner, Observer { loginResponse ->
+            if (loginResponse != null) {
+                // Login successful, navigate to next screen
+                findNavController().navigate(R.id.action_loginFragment_to_OTPLoginFragment)
+            } else {
+                // Login failed, show error message
+                Toast.makeText(requireContext(), "Failed to login", Toast.LENGTH_SHORT).show()
+            }
+        })
+
+        return binding?.root
     }
 
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//        login(username = "username", password = "password")
-//    }
-
-//    private fun login(username: String, password: String) {
-//
-//    }
 }
-

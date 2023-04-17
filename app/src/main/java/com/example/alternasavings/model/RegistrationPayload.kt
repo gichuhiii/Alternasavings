@@ -1,12 +1,12 @@
 package com.example.alternasavings.model
 
 //contains fields for user registration
-class UserRegistrationPayload (
+class RegistrationPayload (
 
-    val fullname: String,
-    val nationalIdNumber: String,
+    val fullName: String,
+    val idNumber: String,
     val dateOfBirth: String,
     val gender: String,
     val phoneNumber: String,
-    val email: String,
+    val email: String
 )

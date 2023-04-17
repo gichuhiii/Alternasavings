@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.fragments.RegisterFragment"
     android:label="Register"
+    tools:context=".ui.fragments.RegisterFragment"
     tools:ignore="HardcodedText">
 
     <!--<include layout="@menu/navigation_menu" />-->
@@ -17,8 +16,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="15dp"
         android:text="Profile Details"
         android:textColor="@color/darktext"
@@ -127,15 +126,15 @@
         android:background="@drawable/textborder"
         app:layout_constraintEnd_toEndOf="@+id/tv_gender"
         app:layout_constraintStart_toStartOf="@+id/tv_gender"
-        app:layout_constraintTop_toBottomOf="@+id/tv_gender" >
+        app:layout_constraintTop_toBottomOf="@+id/tv_gender">
 
         <AutoCompleteTextView
             android:id="@+id/autocomplete_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:textColor="@color/green"
-            android:textSize="16sp"
-            android:background="@color/white" />
+            android:textSize="16sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -144,8 +143,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="15dp"
         android:text="Account Details"
         android:textColor="@color/darktext"
@@ -244,15 +243,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_email" >
+        app:layout_constraintTop_toBottomOf="@+id/et_email">
 
         <TextView
             android:id="@+id/btn_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Next"
-            android:textColor="@color/white"
             android:textAllCaps="true"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
