@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/orange"
-    android:id="@+id/cl_main"
     tools:context=".ui.fragments.DashboardFragment">
 
     <ImageView
@@ -169,8 +168,7 @@
                 android:layout_width="188dp"
                 android:layout_height="52dp"
                 android:layout_margin="15dp"
-                android:background="@drawable/gradient_purple"
-                android:backgroundTint="@null"
+                android:background="@color/orange"
                 android:text="Send Money"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -185,12 +183,11 @@
                 style="@style/Widget.Material3.Button.IconButton.Filled"
                 android:layout_width="194dp"
                 android:layout_height="58dp"
-                android:backgroundTint="@null"
+                android:background="@color/orange"
                 android:text="Request Money"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:background="@drawable/gradient_blue"
                 app:icon="@drawable/requestmoneyicon"
                 app:layout_constraintStart_toEndOf="@+id/bt_sendmoney"
                 app:layout_constraintTop_toTopOf="@+id/bt_sendmoney"
@@ -201,13 +198,12 @@
                 style="@style/Widget.Material3.Button.IconButton.Filled"
                 android:layout_width="190dp"
                 android:layout_height="60dp"
-                android:backgroundTint="@null"
-                app:background="@drawable/gradient_pink"
+                android:layout_marginTop="10dp"
+                android:background="@color/orange"
                 android:text="Expense Tracking"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:layout_marginTop="10dp"
                 app:icon="@drawable/sendmoneyicon"
                 app:layout_constraintStart_toStartOf="@+id/bt_sendmoney"
                 app:layout_constraintTop_toBottomOf="@+id/bt_sendmoney"
@@ -219,8 +215,7 @@
                 android:layout_width="188dp"
                 android:layout_height="57dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/gradient_orange"
-                android:backgroundTint="@null"
+                android:background="@color/orange"
                 android:text="Budget Tracker"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -245,12 +240,12 @@
                 android:id="@+id/tv_viewall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="View All"
-                android:textColor="@color/orange"
-                android:textStyle="bold"
-                android:textSize="16sp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
+                android:text="View All"
+                android:textColor="@color/orange"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/bt_budgettracker"
                 app:layout_constraintTop_toBottomOf="@+id/bt_budgettracker" />
 
@@ -258,12 +253,13 @@
                 android:id="@+id/rv_lasttransactions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:background="@color/dashcolor"
-                tools:listitem="@layout/transactionsample"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="@+id/tv_viewall"
                 app:layout_constraintStart_toStartOf="@+id/tv_lasttransactions"
-                app:layout_constraintTop_toBottomOf="@+id/tv_lasttransactions">
+                app:layout_constraintTop_toBottomOf="@+id/tv_lasttransactions"
+                tools:listitem="@layout/transactionsample">
+
             </androidx.recyclerview.widget.RecyclerView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

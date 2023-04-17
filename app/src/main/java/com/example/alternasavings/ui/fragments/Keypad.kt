@@ -9,11 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.alternasavings.R
 import com.google.android.material.textfield.TextInputEditText
 
-class Keypad(context: Context, attrs: AttributeSet) :ConstraintLayout(context, attrs) {
-    //    private val keyValues = SparseArray<String>()
-    //
-    //    //StringBuilder is used to modify a string
-    //    var code = StringBuilder()
+class Keypad(context: Context, attrs: AttributeSet) : ConstraintLayout(context, attrs) {
     var inputText: TextInputEditText? = null
 
     init {
