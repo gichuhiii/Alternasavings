@@ -31,7 +31,6 @@ class SignupLoginFragment : Fragment() {
         buttonlogin.setOnClickListener {
             findNavController().navigate(R.id.action_signupLoginFragment_to_loginFragment)
         }
-
         return view
     }
 }
