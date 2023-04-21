@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/signupLoginFragment">
+    app:startDestination="@id/goalsFragment">
     <!--    <fragment-->
     <!--        android:id="@+id/splashScreenFragment"-->
     <!--        android:name="com.example.alternasavings.ui.fragments.SplashScreenFragment"-->
@@ -120,5 +120,15 @@
             android:id="@+id/action_OTPLoginFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/goalsFragment"
+        android:name="com.example.alternasavings.ui.fragments.GoalsFragment"
+        android:label="fragment_goals"
+        tools:layout="@layout/fragment_goals" />
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.alternasavings.ui.fragments.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
 
 </navigation>

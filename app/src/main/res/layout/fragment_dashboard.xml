@@ -29,19 +29,19 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_dashboard"
-        android:layout_width="416dp"
-        android:layout_height="686dp"
+        android:layout_width="410dp"
+        android:layout_height="679dp"
         android:backgroundTint="@color/dashcolor"
-        app:cardCornerRadius="35dp"
+        app:cardCornerRadius="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_logo"
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_dash"
+            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -181,7 +181,7 @@
             <Button
                 android:id="@+id/bt_requestmoney"
                 style="@style/Widget.Material3.Button.IconButton.Filled"
-                android:layout_width="194dp"
+                android:layout_width="178dp"
                 android:layout_height="58dp"
                 android:background="@color/orange"
                 android:text="Request Money"
@@ -189,6 +189,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:icon="@drawable/requestmoneyicon"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/bt_sendmoney"
                 app:layout_constraintTop_toTopOf="@+id/bt_sendmoney"
                 app:layout_constraintWidth_percent="0.5" />
@@ -199,6 +200,7 @@
                 android:layout_width="190dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
                 android:background="@color/orange"
                 android:text="Expense Tracking"
                 android:textColor="@color/black"
@@ -212,15 +214,17 @@
             <Button
                 android:id="@+id/bt_budgettracker"
                 style="@style/Widget.Material3.Button.IconButton.Filled"
-                android:layout_width="188dp"
-                android:layout_height="57dp"
+                android:layout_width="174dp"
+                android:layout_height="51dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
                 android:background="@color/orange"
                 android:text="Budget Tracker"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:icon="@drawable/requestmoneyicon"
+                app:layout_constraintEnd_toEndOf="@+id/bt_requestmoney"
                 app:layout_constraintStart_toEndOf="@+id/bt_expensettracking"
                 app:layout_constraintTop_toBottomOf="@+id/bt_sendmoney"
                 app:layout_constraintWidth_percent="0.5" />
@@ -240,8 +244,8 @@
                 android:id="@+id/tv_viewall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="15dp"
                 android:text="View All"
                 android:textColor="@color/orange"
                 android:textSize="16sp"
