@@ -11,9 +11,10 @@
         android:id="@+id/iv_logo"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/settingsicon"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/settings"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,7 +33,7 @@
         android:layout_width="416dp"
         android:layout_height="686dp"
         android:backgroundTint="@color/dashcolor"
-        app:cardCornerRadius="35dp"
+        app:cardCornerRadius="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
