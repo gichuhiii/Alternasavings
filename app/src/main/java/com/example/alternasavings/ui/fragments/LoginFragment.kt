@@ -27,7 +27,6 @@ class LoginFragment : Fragment() {
 
         //hide action bar
         (activity as AppCompatActivity).supportActionBar?.hide()
-
         return inflater.inflate(R.layout.fragment_login, container, false)
     }
 }
