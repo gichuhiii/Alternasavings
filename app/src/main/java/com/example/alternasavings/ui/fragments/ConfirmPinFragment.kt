@@ -11,7 +11,6 @@ import androidx.navigation.fragment.findNavController
 import com.example.alternasavings.R
 
 class ConfirmPinFragment : Fragment() {
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
