@@ -51,16 +51,22 @@ class RegisterFragment : Fragment() {
 
         registerViewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
 
-        registerViewModel.registrationResponse.observe(viewLifecycleOwner, Observer
-        { registrationResponse ->
-            if (registrationResponse != null) {
-                // Registration successful, navigate to next screen
-                findNavController().navigate(R.id.action_registerFragment_to_OTPVerificationFragment)
-            } else {
-                // Registration failed, show error message
-                Toast.makeText(requireContext(), "Failed to register", Toast.LENGTH_SHORT).show()
-            }
-        })
+        val constraintLayout = binding.clNext
+        constraintLayout.setOnClickListener {
+            registerViewModel.registrationResponse.observe(viewLifecycleOwner, Observer
+            { registrationResponse ->
+                if (registrationResponse != null) {
+                    // Registration successful, navigate to next screen
+                    Toast.makeText(requireContext(), "Registration successful", Toast.LENGTH_SHORT)
+                        .show()
+                    findNavController().navigate(R.id.action_registerFragment_to_OTPVerificationFragment)
+                } else {
+                    // Registration failed, show error message
+                    Toast.makeText(requireContext(), "Failed to register", Toast.LENGTH_SHORT)
+                        .show()
+                }
+            })
+        }
     }
 }
 

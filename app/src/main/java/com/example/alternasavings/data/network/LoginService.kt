@@ -13,7 +13,7 @@ interface LoginService {
     suspend fun login(@Body request: LoginPayload): Response <LoginResponse>
 
     object ApiClient {
-       private const val BASE_URL = "http://10.20.33.97:8080/user/login"
+       private const val BASE_URL = "http://10.20.33.73:8080/user/login"
 
         private val retrofit: Retrofit by lazy {
             Retrofit.Builder()
