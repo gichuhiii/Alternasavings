@@ -73,16 +73,6 @@
     </fragment>
 
     <fragment
-        android:id="@+id/savingsPinEntryFragment"
-        android:name="com.example.alternasavings.ui.fragments.SavingsPinEntryFragment"
-        android:label="fragment_savings_pin_entry"
-        tools:layout="@layout/fragment_savings_pin_entry">
-        <action
-            android:id="@+id/action_savingsPinEntryFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-    </fragment>
-
-    <fragment
         android:id="@+id/enterNewPinFragment"
         android:name="com.example.alternasavings.ui.fragments.EnterNewPinFragment"
         android:label="fragment_enter_new_pin"
@@ -112,9 +102,6 @@
         android:name="com.example.alternasavings.ui.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginFragment_to_savingsPinEntryFragment"
-            app:destination="@id/savingsPinEntryFragment" />
         <action
             android:id="@+id/action_loginFragment_to_signupLoginFragment"
             app:destination="@id/signupLoginFragment" />
