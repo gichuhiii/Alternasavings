@@ -23,6 +23,7 @@ class OnBoardingTwoFragment : Fragment() {
         view.animate().setDuration(4500).alpha(1f).withEndAction {
             findNavController().navigate(R.id.action_onBoardingTwoFragment_to_signupLoginFragment)
         }
+
         return view
     }
 }

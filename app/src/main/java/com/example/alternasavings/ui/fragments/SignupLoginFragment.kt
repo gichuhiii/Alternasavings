@@ -17,20 +17,21 @@ class SignupLoginFragment : Fragment() {
 
     ): View? {
 
-        //inflate layout for this fragment
+        //  Inflate layout for this fragment
         val view = inflater.inflate(R.layout.fragment_signuplogin, container, false)
 
-        //for the signup button
+        //  For the signup button
         val buttonsignup = view.findViewById<Button>(R.id.btn_signup)
         buttonsignup.setOnClickListener {
             findNavController().navigate(R.id.action_signupLoginFragment_to_registerFragment)
         }
 
-        //for the login button
+        //  For the login button
         val buttonlogin = view.findViewById<Button>(R.id.btn_login)
         buttonlogin.setOnClickListener {
             findNavController().navigate(R.id.action_signupLoginFragment_to_loginFragment)
         }
+
         return view
     }
 }

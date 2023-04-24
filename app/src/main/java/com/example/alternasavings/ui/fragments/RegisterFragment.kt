@@ -4,10 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
@@ -25,18 +22,26 @@ class RegisterFragment : Fragment() {
     private lateinit var binding: FragmentRegisterBinding
     private lateinit var registerViewModel: RegisterViewModel
     override fun onCreateView(
-
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //Fragment Title
+        //  Fragment Title
         (activity as AppCompatActivity).supportActionBar?.title = "Register"
 
-        binding = FragmentRegisterBinding.inflate(inflater, container, false)
-        return binding.root
+        val view = inflater.inflate(R.layout.fragment_register, container, false)
+
+        //  For the next button
+        val btnNext = view.findViewById<ConstraintLayout>(R.id.cl_next)
+        btnNext.setOnClickListener {
+            Toast.makeText(requireContext(), "Register", Toast.LENGTH_SHORT).show()
+
+            findNavController().navigate(R.id.action_registerFragment_to_OTPVerificationFragment)
+        }
+
+        return view
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    /*override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val genderOptions = listOf("Male", "Female", "Prefer not to say")
@@ -57,7 +62,11 @@ class RegisterFragment : Fragment() {
             { registrationResponse ->
                 if (registrationResponse != null) {
                     // Registration successful, navigate to next screen
-                    Toast.makeText(requireContext(), "Registration successful", Toast.LENGTH_SHORT)
+                    Toast.makeText(
+                        requireContext(),
+                        "Registration successful",
+                        Toast.LENGTH_SHORT
+                    )
                         .show()
                     findNavController().navigate(R.id.action_registerFragment_to_OTPVerificationFragment)
                 } else {
@@ -67,11 +76,11 @@ class RegisterFragment : Fragment() {
                 }
             })
         }
-    }
+    }*/
 }
 
 
-//        //for auto complete text view
+//        for auto complete text view
 //        val genderOptions = listOf("Male", "Female", "Prefer not to say")
 //        val adapter = ArrayAdapter(
 //            requireContext(),
