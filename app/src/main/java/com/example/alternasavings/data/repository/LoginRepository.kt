@@ -1,14 +1,14 @@
 package com.example.alternasavings.data.repository
 
-import com.example.alternasavings.data.network.LoginService
+//import com.example.alternasavings.data.network.LoginService
 import com.example.alternasavings.model.LoginPayload
 import com.example.alternasavings.model.LoginResponse
 import retrofit2.Response
 
 class LoginRepository {
-    suspend fun login(phoneNumber: String, password: String): Result<LoginResponse> {
-        val payload = LoginPayload(phoneNumber, password)
-        val response = LoginService.ApiClient.LoginService.login(payload)
+//    suspend fun login(phoneNumber: String, password: String): Result<LoginResponse> {
+//        val payload = LoginPayload(phoneNumber, password)
+        /*val response = LoginService.ApiClient.LoginService.login(payload)
 
         if (response.isSuccessful) {
             val loginResponse = response.body()
@@ -17,6 +17,6 @@ class LoginRepository {
             }
         }
 
-        return Result.failure(Exception("Failed to login"))
-    }
+        return Result.failure(Exception("Failed to login"))*/
+//    }
 }

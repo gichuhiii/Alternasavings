@@ -14,8 +14,8 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
 
     fun login(phoneNumber: String, password: String) {
         viewModelScope.launch {
-            val result = loginRepository.login(phoneNumber, password)
-            _loginResult.value = result
+//            val result = loginRepository.login(phoneNumber, password)
+//            _loginResult.value = result
         }
     }
 }

@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="@+id/tv_instruction2"
         app:layout_constraintHorizontal_bias="0.512"
@@ -64,7 +64,7 @@
         <include
             layout="@layout/keypad"
             android:layout_width="406dp"
-            android:layout_height="340dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="15dp"

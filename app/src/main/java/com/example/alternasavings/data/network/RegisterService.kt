@@ -12,7 +12,7 @@ interface RegisterService {
     suspend fun registerUser(@Body request: RegistrationPayload): RegistrationResponse
 
     object ApiClient {
-        private const val BASE_URL = "http://10.20.33.97:8080/user/signup"
+        private const val BASE_URL = "http://10.20.33.73:8080/user/signup"
 
         private val retrofit: Retrofit by lazy {
             Retrofit.Builder()
