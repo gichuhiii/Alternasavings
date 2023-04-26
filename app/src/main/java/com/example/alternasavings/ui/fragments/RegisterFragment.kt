@@ -33,13 +33,14 @@ class RegisterFragment : Fragment() {
         val btnNext = view.findViewById<ConstraintLayout>(R.id.cl_next)
 
         val requestData = RegisterRequestPayload(
-            view.findViewById<EditText>(R.id.et_fullname).toString(),
-            view.findViewById<EditText>(R.id.et_idnumber).toString(),
-            view.findViewById<EditText>(R.id.et_dob).toString(),
-            view.findViewById<AutoCompleteTextView>(R.id.autocomplete_textview).toString(),
-            view.findViewById<EditText>(R.id.et_phone_number).toString(),
-            view.findViewById<EditText>(R.id.et_email).toString(),
-        )
+            view.findViewById<EditText>(R.id.et_fullname).text.toString(),
+            view.findViewById<EditText>(R.id.et_idnumber).text.toString(),
+            view.findViewById<EditText>(R.id.et_dob).text.toString(),
+            view.findViewById<AutoCompleteTextView>(R.id.autocomplete_textview).text.toString(),
+            view.findViewById<EditText>(R.id.et_phone_number).text.toString(),
+            view.findViewById<EditText>(R.id.et_email).text.toString(),
+
+            )
 
         btnNext.setOnClickListener {
             ApiClient.authService.register(requestData)

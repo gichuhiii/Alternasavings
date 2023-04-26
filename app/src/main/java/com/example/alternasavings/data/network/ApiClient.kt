@@ -8,7 +8,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 //to call API service
 object ApiClient {
     //  Get URL
-    private const val BASE_URL = "https://{{domain}}/"
+    private const val BASE_URL = "http://10.20.33.73:8080/"
 
     //  Create variable for Moshi builder and add converter
     private val moshi = Moshi.Builder()

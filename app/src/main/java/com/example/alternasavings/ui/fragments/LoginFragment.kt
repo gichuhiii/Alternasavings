@@ -72,12 +72,12 @@ class LoginFragment : Fragment() {
     }
 
     private fun validate(data: LoginRequestPayload): Boolean {
-        if (data.phone.isEmpty()) {
+        if (data.phoneNumber.isEmpty()) {
             Toast.makeText(requireContext(), "Phone number is required.", Toast.LENGTH_SHORT).show()
             return false
         }
 
-        if (getPhoneProvider(data.phone) == null) {
+        if (getPhoneProvider(data.phoneNumber) == null) {
             Toast.makeText(requireContext(), "Phone number is invalid.", Toast.LENGTH_SHORT).show()
             return false
         }
