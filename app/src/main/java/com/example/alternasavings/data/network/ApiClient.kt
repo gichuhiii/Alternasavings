@@ -19,7 +19,6 @@ object ApiClient {
     private val retrofit: Retrofit by lazy {
         //build with Retrofit
         Retrofit.Builder()
-
             //pass base URL and Moshi variables
             .baseUrl(BASE_URL)
             .addConverterFactory(MoshiConverterFactory.create(moshi))

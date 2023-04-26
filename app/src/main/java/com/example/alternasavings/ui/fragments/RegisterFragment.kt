@@ -32,17 +32,16 @@ class RegisterFragment : Fragment() {
         //  For the next button
         val btnNext = view.findViewById<ConstraintLayout>(R.id.cl_next)
 
-        val requestData = RegisterRequestPayload(
-            view.findViewById<EditText>(R.id.et_fullname).text.toString(),
-            view.findViewById<EditText>(R.id.et_idnumber).text.toString(),
-            view.findViewById<EditText>(R.id.et_dob).text.toString(),
-            view.findViewById<AutoCompleteTextView>(R.id.autocomplete_textview).text.toString(),
-            view.findViewById<EditText>(R.id.et_phone_number).text.toString(),
-            view.findViewById<EditText>(R.id.et_email).text.toString(),
-
+        btnNext.setOnClickListener {
+            val requestData = RegisterRequestPayload(
+                view.findViewById<EditText>(R.id.et_fullname).text.toString(),
+                view.findViewById<EditText>(R.id.et_idnumber).text.toString(),
+                view.findViewById<EditText>(R.id.et_dob).text.toString(),
+                view.findViewById<AutoCompleteTextView>(R.id.autocomplete_textview).text.toString(),
+                view.findViewById<EditText>(R.id.et_phone_number).text.toString(),
+                view.findViewById<EditText>(R.id.et_email).text.toString(),
             )
 
-        btnNext.setOnClickListener {
             ApiClient.authService.register(requestData)
                 .enqueue(object : retrofit2.Callback<LoginResponsePayload> {
                     override fun onResponse(
