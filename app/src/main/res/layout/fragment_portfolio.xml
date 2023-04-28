@@ -5,18 +5,19 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/orange"
-    tools:context=".ui.fragments.MilestonesFragment">
+    tools:context=".ui.fragments.PortfolioFragment">
 
     <TextView
-        android:id="@+id/tv_pagetitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Milestones"
+        android:id="@+id/iv_logo"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Portfolio"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="25dp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,23 +26,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/notificationicon"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_pagetitle"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.892"
-        app:layout_constraintStart_toEndOf="@+id/tv_pagetitle"
-        app:layout_constraintTop_toTopOf="@+id/tv_pagetitle" />
+        app:layout_constraintStart_toEndOf="@+id/iv_logo"
+        app:layout_constraintTop_toTopOf="@+id/iv_logo" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_dashboard"
-        android:layout_width="410dp"
-        android:layout_height="673dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="416dp"
+        android:layout_height="686dp"
         android:backgroundTint="@color/dashcolor"
         app:cardCornerRadius="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_pagetitle">
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -61,6 +62,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav_view"
         android:layout_width="wrap_content"
