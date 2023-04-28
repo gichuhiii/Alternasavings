@@ -54,11 +54,8 @@ class RegisterFragment : Fragment() {
                         //  Check if response is successful and display response body
                         if (response.isSuccessful) {
                             //  Get results from response body
-                            val res = response.body()
-
                             Toast.makeText(requireContext(), "Registered!", Toast.LENGTH_SHORT)
                                 .show()
-
                             findNavController().navigate(R.id.action_registerFragment_to_OTPVerificationFragment)
                         }
                     }
