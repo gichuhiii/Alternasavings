@@ -1,7 +1,6 @@
 package com.example.alternasavings.model
 
 class RegistrationResponse (
+    val token: String
 
-    //contains message explaining the result
-    val message: String,
 )

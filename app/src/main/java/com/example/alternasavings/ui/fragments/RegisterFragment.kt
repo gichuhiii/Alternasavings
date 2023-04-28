@@ -51,14 +51,17 @@ class RegisterFragment : Fragment() {
                         Log.d("REQ", call.request().toString())
                         Log.d("RES", response.toString())
 
+                        findNavController().navigate(R.id.action_registerFragment_to_OTPVerificationFragment)
+                        Toast.makeText(requireContext(), "Registered!", Toast.LENGTH_SHORT)
+                            .show()
                         //  Check if response is successful and display response body
-                        if (response.isSuccessful) {
-                            findNavController().navigate(R.id.action_registerFragment_to_OTPVerificationFragment)
-
-                            //  Get results from response body
-                            Toast.makeText(requireContext(), "Registered!", Toast.LENGTH_SHORT)
-                                .show()
-                        }
+//                        if (response.isSuccessful) {
+//                            findNavController().navigate(R.id.action_registerFragment_to_OTPVerificationFragment)
+//
+//                            //  Get results from response body
+//                            Toast.makeText(requireContext(), "Registered!", Toast.LENGTH_SHORT)
+//                                .show()
+//                        }
                     }
 
                     //  If it was not successful
@@ -137,5 +140,3 @@ class RegisterFragment : Fragment() {
 //
 //        return view
 //    }
-
-
