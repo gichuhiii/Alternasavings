@@ -113,6 +113,115 @@
         android:id="@+id/dashboardFragment"
         android:name="com.example.alternasavings.ui.fragments.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_goalsFragment"
+            app:destination="@id/goalsFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_milestonesFragment"
+            app:destination="@id/milestonesFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_portfolioFragment"
+            app:destination="@id/portfolioFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_self"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/goalsFragment"
+        android:name="com.example.alternasavings.ui.fragments.GoalsFragment"
+        android:label="fragment_goals"
+        tools:layout="@layout/fragment_goals" >
+        <action
+            android:id="@+id/action_goalsFragment_self"
+            app:destination="@id/goalsFragment" />
+        <action
+            android:id="@+id/action_goalsFragment_to_milestonesFragment"
+            app:destination="@id/milestonesFragment" />
+        <action
+            android:id="@+id/action_goalsFragment_to_milestonesFragment2"
+            app:destination="@id/milestonesFragment" />
+        <action
+            android:id="@+id/action_goalsFragment_to_portfolioFragment"
+            app:destination="@id/portfolioFragment" />
+        <action
+            android:id="@+id/action_goalsFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_goalsFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/milestonesFragment"
+        android:name="com.example.alternasavings.ui.fragments.MilestonesFragment"
+        android:label="fragment_milestones"
+        tools:layout="@layout/fragment_milestones" >
+        <action
+            android:id="@+id/action_milestonesFragment_self"
+            app:destination="@id/milestonesFragment" />
+        <action
+            android:id="@+id/action_milestonesFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_milestonesFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_milestonesFragment_to_goalsFragment"
+            app:destination="@id/goalsFragment" />
+        <action
+            android:id="@+id/action_milestonesFragment_self2"
+            app:destination="@id/milestonesFragment" />
+        <action
+            android:id="@+id/action_milestonesFragment_to_portfolioFragment"
+            app:destination="@id/portfolioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/portfolioFragment"
+        android:name="com.example.alternasavings.ui.fragments.PortfolioFragment"
+        android:label="fragment_portfolio"
+        tools:layout="@layout/fragment_portfolio" >
+        <action
+            android:id="@+id/action_portfolioFragment_self"
+            app:destination="@id/portfolioFragment" />
+        <action
+            android:id="@+id/action_portfolioFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_portfolioFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_portfolioFragment_to_goalsFragment"
+            app:destination="@id/goalsFragment" />
+        <action
+            android:id="@+id/action_portfolioFragment_to_milestonesFragment"
+            app:destination="@id/milestonesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.alternasavings.ui.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_self"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_milestonesFragment"
+            app:destination="@id/milestonesFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_portfolioFragment"
+            app:destination="@id/portfolioFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_milestonesFragment2"
+            app:destination="@id/milestonesFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_goalsFragment"
+            app:destination="@id/goalsFragment" />
+    </fragment>
 
 </navigation>
