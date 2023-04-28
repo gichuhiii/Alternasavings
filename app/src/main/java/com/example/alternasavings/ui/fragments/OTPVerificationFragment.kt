@@ -27,7 +27,7 @@ class OTPVerificationFragment : Fragment() {
         btnNext.setOnClickListener {
             Toast.makeText(requireContext(), "Verify", Toast.LENGTH_SHORT).show()
 
-            findNavController().navigate(R.id.action_OTPVerificationFragment2_to_activationCodeEntryFragment)
+            findNavController().navigate(R.id.action_OTPVerificationFragment_to_activationCodeEntryFragment)
         }
 
         return view

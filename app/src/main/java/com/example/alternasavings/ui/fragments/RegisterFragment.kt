@@ -32,16 +32,16 @@ class RegisterFragment : Fragment() {
         //  For the next button
         val btnNext = view.findViewById<ConstraintLayout>(R.id.cl_next)
 
-        val requestData = RegisterRequestPayload(
-            view.findViewById<EditText>(R.id.et_fullname).toString(),
-            view.findViewById<EditText>(R.id.et_idnumber).toString(),
-            view.findViewById<EditText>(R.id.et_dob).toString(),
-            view.findViewById<AutoCompleteTextView>(R.id.autocomplete_textview).toString(),
-            view.findViewById<EditText>(R.id.et_phone_number).toString(),
-            view.findViewById<EditText>(R.id.et_email).toString(),
-        )
-
         btnNext.setOnClickListener {
+            val requestData = RegisterRequestPayload(
+                view.findViewById<EditText>(R.id.et_fullname).text.toString(),
+                view.findViewById<EditText>(R.id.et_idnumber).text.toString(),
+                view.findViewById<EditText>(R.id.et_dob).text.toString(),
+                view.findViewById<AutoCompleteTextView>(R.id.autocomplete_textview).text.toString(),
+                view.findViewById<EditText>(R.id.et_phone_number).text.toString(),
+                view.findViewById<EditText>(R.id.et_email).text.toString(),
+            )
+
             ApiClient.authService.register(requestData)
                 .enqueue(object : retrofit2.Callback<LoginResponsePayload> {
                     override fun onResponse(
@@ -51,16 +51,17 @@ class RegisterFragment : Fragment() {
                         Log.d("REQ", call.request().toString())
                         Log.d("RES", response.toString())
 
+                        findNavController().navigate(R.id.action_registerFragment_to_OTPVerificationFragment)
+                        Toast.makeText(requireContext(), "Registered!", Toast.LENGTH_SHORT)
+                            .show()
                         //  Check if response is successful and display response body
-                        if (response.isSuccessful) {
-                            //  Get results from response body
-                            val res = response.body()
-
-                            Toast.makeText(requireContext(), "Registered!", Toast.LENGTH_SHORT)
-                                .show()
-
-                            findNavController().navigate(R.id.action_registerFragment_to_OTPVerificationFragment)
-                        }
+//                        if (response.isSuccessful) {
+//                            findNavController().navigate(R.id.action_registerFragment_to_OTPVerificationFragment)
+//
+//                            //  Get results from response body
+//                            Toast.makeText(requireContext(), "Registered!", Toast.LENGTH_SHORT)
+//                                .show()
+//                        }
                     }
 
                     //  If it was not successful
@@ -139,5 +140,3 @@ class RegisterFragment : Fragment() {
 //
 //        return view
 //    }
-
-

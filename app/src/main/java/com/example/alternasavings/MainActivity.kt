@@ -7,12 +7,9 @@ import androidx.navigation.fragment.NavHostFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navcontroller: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
-//        WindowCompat.setDecorFitsSystemWindows(window, true)
-//      setFlags(
-//          WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-//          WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-//      )
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -20,7 +17,6 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         navcontroller = navHostFragment.navController
 
-//        setupActionBarWithNavController(navcontroller)
     }
 
     override fun onSupportNavigateUp(): Boolean {
