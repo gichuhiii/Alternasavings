@@ -29,67 +29,71 @@ class LoginFragment : Fragment() {
         (activity as AppCompatActivity).supportActionBar?.hide()
 
         val view = inflater.inflate(R.layout.fragment_login, container, false)
-
-
         val btnNext = view.findViewById<ConstraintLayout>(R.id.cl_next)
 
         btnNext.setOnClickListener {
-            val requestData = LoginRequestPayload(
-                view.findViewById<EditText>(R.id.et_phone_number).text.toString(),
-                view.findViewById<EditText>(R.id.et_pin).text.toString()
-            )
-
-            if (validate(requestData)) {
-                ApiClient.authService.login(requestData)
-                    .enqueue(object : retrofit2.Callback<LoginResponsePayload> {
-                        override fun onResponse(
-                            call: Call<LoginResponsePayload>,
-                            response: Response<LoginResponsePayload>
-                        ) {
-                            Log.d("REQ", call.request().toString())
-                            Log.d("RES", response.toString())
-
-                            //  Check if response is successful and display response body
-                            if (response.isSuccessful) {
-                                //  Get results from response body
-                                val token = response.body()?.access_token
-
-                                Toast.makeText(requireContext(), token, Toast.LENGTH_SHORT).show()
-
-                                findNavController().navigate(R.id.action_loginFragment_to_dashboardFragment)
-                            }
-                        }
-
-                        //  If it was not successful
-                        override fun onFailure(call: Call<LoginResponsePayload>, t: Throwable) {
-                            Log.e("Failed: ", t.message.toString())
-                        }
-                    })
-            }
+            findNavController().navigate(R.id.action_loginFragment_to_dashboardFragment)
         }
-
         return view
     }
-
-    private fun validate(data: LoginRequestPayload): Boolean {
-        if (data.phoneNumber.isEmpty()) {
-            Toast.makeText(requireContext(), "Phone number is required.", Toast.LENGTH_SHORT).show()
-            return false
-        }
-
-        if (getPhoneProvider(data.phoneNumber) == null) {
-            Toast.makeText(requireContext(), "Phone number is invalid.", Toast.LENGTH_SHORT).show()
-            return false
-        }
-
-        if (data.pin.isEmpty()) {
-            Toast.makeText(requireContext(), "PIN is required.", Toast.LENGTH_SHORT).show()
-            return false
-        }
-
-        return false
-    }
 }
+
+//            val requestData = LoginRequestPayload(
+//                view.findViewById<EditText>(R.id.et_phone_number).text.toString(),
+//                view.findViewById<EditText>(R.id.et_pin).text.toString()
+//            )
+//
+//            if (validate(requestData)) {
+//                ApiClient.authService.login(requestData)
+//                    .enqueue(object : retrofit2.Callback<LoginResponsePayload> {
+//                        override fun onResponse(
+//                            call: Call<LoginResponsePayload>,
+//                            response: Response<LoginResponsePayload>
+//                        ) {
+//                            Log.d("REQ", call.request().toString())
+//                            Log.d("RES", response.toString())
+//
+//                            //  Check if response is successful and display response body
+//                            if (response.isSuccessful) {
+//                                //  Get results from response body
+//                                val token = response.body()?.access_token
+//
+//                                Toast.makeText(requireContext(), token, Toast.LENGTH_SHORT).show()
+//
+//                                findNavController().navigate(R.id.action_loginFragment_to_dashboardFragment)
+//                            }
+//                        }
+//
+//                        //  If it was not successful
+//                        override fun onFailure(call: Call<LoginResponsePayload>, t: Throwable) {
+//                            Log.e("Failed: ", t.message.toString())
+//                        }
+//                    })
+//            }
+//        }
+
+//        return view
+//    }
+
+//    private fun validate(data: LoginRequestPayload): Boolean {
+//        if (data.phoneNumber.isEmpty()) {
+//            Toast.makeText(requireContext(), "Phone number is required.", Toast.LENGTH_SHORT).show()
+//            return false
+//        }
+//
+//        if (getPhoneProvider(data.phoneNumber) == null) {
+//            Toast.makeText(requireContext(), "Phone number is invalid.", Toast.LENGTH_SHORT).show()
+//            return false
+//        }
+//
+//        if (data.pin.isEmpty()) {
+//            Toast.makeText(requireContext(), "PIN is required.", Toast.LENGTH_SHORT).show()
+//            return false
+//        }
+//
+//        return false
+//    }
+//}
 
 
 //    private lateinit var viewModel: LoginViewModel

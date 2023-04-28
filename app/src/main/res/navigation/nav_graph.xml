@@ -55,7 +55,7 @@
         android:label="fragment_otp_verification"
         tools:layout="@layout/fragment_otp_verification">
         <action
-            android:id="@+id/action_OTPVerificationFragment2_to_activationCodeEntryFragment"
+            android:id="@+id/action_OTPVerificationFragment_to_activationCodeEntryFragment"
             app:destination="@id/activationCodeEntryFragment" />
     </fragment>
 
