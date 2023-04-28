@@ -35,7 +35,6 @@ class ActivationCodeEntryFragment : Fragment() {
                 ).show()
             } else {
                 Toast.makeText(requireContext(), "Activated", Toast.LENGTH_SHORT).show()
-
                 findNavController().navigate(R.id.action_activationCodeEntryFragment_to_enterNewPinFragment)
             }
         }
